@@ -1,0 +1,1351 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dr. Y V Srinivasa Murthy - Associate Professor | Researcher</title>
+    <link href="https://fonts.googleapis.com/css2?family=Crimson+Pro:wght@300;400;600;700&family=Source+Sans+3:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --primary: #1a365d;
+            --secondary: #2c5282;
+            --accent: #c05621;
+            --light: #f7fafc;
+            --text: #2d3748;
+            --text-light: #4a5568;
+            --border: #e2e8f0;
+            --shadow: rgba(0, 0, 0, 0.08);
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Source Sans 3', sans-serif;
+            color: var(--text);
+            line-height: 1.7;
+            background: linear-gradient(135deg, #f7fafc 0%, #edf2f7 100%);
+            overflow-x: hidden;
+        }
+
+        h1, h2, h3 {
+            font-family: 'Crimson Pro', serif;
+            font-weight: 600;
+            line-height: 1.2;
+        }
+
+        /* Navigation */
+        nav {
+            position: fixed;
+            top: 0;
+            width: 100%;
+            background: rgba(255, 255, 255, 0.95);
+            backdrop-filter: blur(10px);
+            box-shadow: 0 2px 20px var(--shadow);
+            z-index: 1000;
+            animation: slideDown 0.6s ease-out;
+        }
+
+        @keyframes slideDown {
+            from {
+                transform: translateY(-100%);
+                opacity: 0;
+            }
+            to {
+                transform: translateY(0);
+                opacity: 1;
+            }
+        }
+
+        .nav-container {
+            max-width: 1400px;
+            margin: 0 auto;
+            padding: 1.2rem 2rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            font-family: 'Crimson Pro', serif;
+            font-size: 1.4rem;
+            font-weight: 700;
+            color: var(--primary);
+            letter-spacing: -0.5px;
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 2.5rem;
+            list-style: none;
+        }
+
+        .nav-links a {
+            text-decoration: none;
+            color: var(--text);
+            font-weight: 500;
+            font-size: 0.95rem;
+            position: relative;
+            transition: color 0.3s;
+        }
+
+        .nav-links a::after {
+            content: '';
+            position: absolute;
+            bottom: -5px;
+            left: 0;
+            width: 0;
+            height: 2px;
+            background: var(--accent);
+            transition: width 0.3s ease;
+        }
+
+        .nav-links a:hover {
+            color: var(--accent);
+        }
+
+        .nav-links a:hover::after {
+            width: 100%;
+        }
+
+        /* Hero Section */
+        .hero {
+            margin-top: 80px;
+            padding: 5rem 2rem 4rem;
+            max-width: 1400px;
+            margin-left: auto;
+            margin-right: auto;
+            display: grid;
+            grid-template-columns: 1.5fr 1fr;
+            gap: 4rem;
+            align-items: center;
+            animation: fadeIn 1s ease-out;
+        }
+
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .hero-content h1 {
+            font-size: 3.2rem;
+            color: var(--primary);
+            margin-bottom: 0.5rem;
+            animation: fadeInUp 0.8s ease-out 0.2s backwards;
+        }
+
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(40px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .hero-content .title {
+            font-size: 1.3rem;
+            color: var(--accent);
+            font-weight: 600;
+            margin-bottom: 1rem;
+            animation: fadeInUp 0.8s ease-out 0.4s backwards;
+        }
+
+        .hero-content .roles {
+            font-size: 1.05rem;
+            color: var(--text-light);
+            margin-bottom: 1.5rem;
+            animation: fadeInUp 0.8s ease-out 0.5s backwards;
+        }
+
+        .hero-content .affiliation {
+            font-size: 1.05rem;
+            color: var(--text-light);
+            margin-bottom: 2rem;
+            line-height: 1.8;
+            animation: fadeInUp 0.8s ease-out 0.6s backwards;
+        }
+
+        .academic-ids {
+            display: flex;
+            gap: 1.5rem;
+            flex-wrap: wrap;
+            margin-bottom: 2rem;
+            animation: fadeInUp 0.8s ease-out 0.7s backwards;
+        }
+
+        .id-badge {
+            padding: 0.5rem 1rem;
+            background: white;
+            border-radius: 6px;
+            font-size: 0.85rem;
+            color: var(--text-light);
+            box-shadow: 0 2px 8px var(--shadow);
+        }
+
+        .id-badge strong {
+            color: var(--primary);
+        }
+
+        .cta-buttons {
+            display: flex;
+            gap: 1rem;
+            animation: fadeInUp 0.8s ease-out 0.8s backwards;
+        }
+
+        .btn {
+            padding: 0.9rem 2rem;
+            border: none;
+            border-radius: 6px;
+            font-size: 1rem;
+            font-weight: 600;
+            cursor: pointer;
+            text-decoration: none;
+            display: inline-block;
+            transition: all 0.3s;
+        }
+
+        .btn-primary {
+            background: var(--primary);
+            color: white;
+        }
+
+        .btn-primary:hover {
+            background: var(--secondary);
+            transform: translateY(-2px);
+            box-shadow: 0 10px 25px rgba(26, 54, 93, 0.2);
+        }
+
+        .btn-secondary {
+            background: white;
+            color: var(--primary);
+            border: 2px solid var(--primary);
+        }
+
+        .btn-secondary:hover {
+            background: var(--primary);
+            color: white;
+            transform: translateY(-2px);
+        }
+
+        .hero-sidebar {
+            position: relative;
+            animation: fadeInScale 1s ease-out 0.4s backwards;
+        }
+
+        @keyframes fadeInScale {
+            from {
+                opacity: 0;
+                transform: scale(0.9);
+            }
+            to {
+                opacity: 1;
+                transform: scale(1);
+            }
+        }
+
+        .quick-links {
+            background: white;
+            padding: 2rem;
+            border-radius: 12px;
+            box-shadow: 0 8px 30px var(--shadow);
+        }
+
+        .quick-links h3 {
+            color: var(--primary);
+            margin-bottom: 1.5rem;
+            font-size: 1.4rem;
+        }
+
+        .link-item {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+            padding: 0.8rem;
+            margin-bottom: 0.8rem;
+            border-radius: 8px;
+            transition: all 0.3s;
+            text-decoration: none;
+            color: var(--text);
+        }
+
+        .link-item:hover {
+            background: var(--light);
+            transform: translateX(5px);
+        }
+
+        .link-icon {
+            width: 40px;
+            height: 40px;
+            background: linear-gradient(135deg, var(--primary), var(--secondary));
+            border-radius: 8px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-size: 1.2rem;
+            flex-shrink: 0;
+        }
+
+        /* Sections */
+        section {
+            max-width: 1400px;
+            margin: 0 auto;
+            padding: 4rem 2rem;
+        }
+
+        .section-title {
+            font-size: 2.5rem;
+            color: var(--primary);
+            margin-bottom: 0.5rem;
+            position: relative;
+            display: inline-block;
+        }
+
+        .section-title::after {
+            content: '';
+            position: absolute;
+            bottom: -10px;
+            left: 0;
+            width: 60px;
+            height: 4px;
+            background: var(--accent);
+            border-radius: 2px;
+        }
+
+        .section-subtitle {
+            color: var(--text-light);
+            font-size: 1.1rem;
+            margin-bottom: 3rem;
+        }
+
+        /* Stats Grid */
+        .stats-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 2rem;
+            margin: 3rem 0;
+        }
+
+        .stat-card {
+            background: white;
+            padding: 2rem;
+            border-radius: 12px;
+            box-shadow: 0 4px 15px var(--shadow);
+            text-align: center;
+            transition: transform 0.3s;
+            border-top: 4px solid var(--accent);
+        }
+
+        .stat-card:hover {
+            transform: translateY(-5px);
+        }
+
+        .stat-number {
+            font-size: 3rem;
+            font-weight: 700;
+            color: var(--accent);
+            font-family: 'Crimson Pro', serif;
+        }
+
+        .stat-label {
+            color: var(--text-light);
+            margin-top: 0.5rem;
+            font-weight: 600;
+        }
+
+        /* Research Areas */
+        .research-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 1.5rem;
+            margin: 3rem 0;
+        }
+
+        .research-card {
+            background: white;
+            padding: 2rem;
+            border-radius: 12px;
+            box-shadow: 0 4px 15px var(--shadow);
+            border-left: 4px solid var(--accent);
+            transition: all 0.3s;
+        }
+
+        .research-card:hover {
+            transform: translateX(5px);
+            box-shadow: 0 8px 25px rgba(0, 0, 0, 0.12);
+        }
+
+        .research-card h4 {
+            color: var(--primary);
+            margin-bottom: 0.8rem;
+            font-size: 1.2rem;
+        }
+
+        .research-card p {
+            color: var(--text-light);
+            font-size: 0.95rem;
+        }
+
+        /* Funded Projects */
+        .projects-table {
+            background: white;
+            padding: 2.5rem;
+            border-radius: 12px;
+            box-shadow: 0 4px 20px var(--shadow);
+            margin: 3rem 0;
+            overflow-x: auto;
+        }
+
+        .projects-table h3 {
+            color: var(--primary);
+            margin-bottom: 2rem;
+            font-size: 1.8rem;
+        }
+
+        .project-item {
+            padding: 1.5rem;
+            margin-bottom: 1.5rem;
+            background: var(--light);
+            border-radius: 8px;
+            border-left: 4px solid var(--accent);
+        }
+
+        .project-item h4 {
+            color: var(--primary);
+            margin-bottom: 0.5rem;
+            font-size: 1.1rem;
+        }
+
+        .project-meta {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+            gap: 1rem;
+            margin-top: 1rem;
+        }
+
+        .meta-item {
+            font-size: 0.9rem;
+        }
+
+        .meta-item strong {
+            color: var(--primary);
+            display: block;
+            margin-bottom: 0.2rem;
+        }
+
+        /* Publications */
+        .publications-section {
+            background: white;
+            padding: 2.5rem;
+            border-radius: 12px;
+            box-shadow: 0 4px 20px var(--shadow);
+            margin: 3rem 0;
+        }
+
+        .publications-section h3 {
+            color: var(--primary);
+            margin-bottom: 2rem;
+            font-size: 1.8rem;
+        }
+
+        .publication-item {
+            padding: 1.5rem 0;
+            border-bottom: 1px solid var(--border);
+        }
+
+        .publication-item:last-child {
+            border-bottom: none;
+        }
+
+        .publication-item h4 {
+            color: var(--primary);
+            margin-bottom: 0.5rem;
+            font-size: 1.05rem;
+            line-height: 1.5;
+        }
+
+        .publication-meta {
+            color: var(--text-light);
+            font-size: 0.9rem;
+            margin-top: 0.3rem;
+        }
+
+        .badge {
+            display: inline-block;
+            padding: 0.3rem 0.8rem;
+            background: var(--accent);
+            color: white;
+            border-radius: 20px;
+            font-size: 0.75rem;
+            font-weight: 600;
+            margin-left: 0.5rem;
+        }
+
+        .badge-blue {
+            background: var(--primary);
+        }
+
+        /* Timeline */
+        .timeline {
+            position: relative;
+            padding-left: 3rem;
+        }
+
+        .timeline::before {
+            content: '';
+            position: absolute;
+            left: 0;
+            top: 0;
+            bottom: 0;
+            width: 2px;
+            background: linear-gradient(180deg, var(--accent) 0%, var(--primary) 100%);
+        }
+
+        .timeline-item {
+            position: relative;
+            margin-bottom: 2.5rem;
+            padding: 1.5rem 2rem;
+            background: white;
+            border-radius: 12px;
+            box-shadow: 0 4px 15px var(--shadow);
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+
+        .timeline-item:hover {
+            transform: translateX(5px);
+            box-shadow: 0 8px 25px rgba(0, 0, 0, 0.12);
+        }
+
+        .timeline-item::before {
+            content: '';
+            position: absolute;
+            left: -3.5rem;
+            top: 2rem;
+            width: 14px;
+            height: 14px;
+            background: var(--accent);
+            border: 3px solid white;
+            border-radius: 50%;
+            box-shadow: 0 0 0 4px var(--light);
+        }
+
+        .timeline-item h3 {
+            color: var(--primary);
+            font-size: 1.3rem;
+            margin-bottom: 0.5rem;
+        }
+
+        .timeline-item .position {
+            color: var(--accent);
+            font-weight: 600;
+            margin-bottom: 0.3rem;
+        }
+
+        .timeline-item .date {
+            color: var(--text-light);
+            font-size: 0.9rem;
+            margin-bottom: 0.8rem;
+        }
+
+        /* Contact */
+        .contact-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 3rem;
+            margin-top: 2rem;
+        }
+
+        .contact-card {
+            background: white;
+            padding: 2.5rem;
+            border-radius: 12px;
+            box-shadow: 0 4px 20px var(--shadow);
+        }
+
+        .contact-item {
+            display: flex;
+            align-items: start;
+            gap: 1.5rem;
+            margin-bottom: 2rem;
+        }
+
+        .contact-item:last-child {
+            margin-bottom: 0;
+        }
+
+        .contact-icon {
+            width: 50px;
+            height: 50px;
+            background: linear-gradient(135deg, var(--primary), var(--secondary));
+            border-radius: 10px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-size: 1.3rem;
+            flex-shrink: 0;
+        }
+
+        .contact-details h4 {
+            color: var(--primary);
+            margin-bottom: 0.5rem;
+        }
+
+        .contact-details p {
+            color: var(--text-light);
+            line-height: 1.6;
+        }
+
+        .contact-details a {
+            color: var(--accent);
+            text-decoration: none;
+            transition: color 0.3s;
+        }
+
+        .contact-details a:hover {
+            color: var(--primary);
+        }
+
+        /* Achievements */
+        .achievement-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+            margin: 3rem 0;
+        }
+
+        .achievement-card {
+            background: white;
+            padding: 2rem;
+            border-radius: 12px;
+            box-shadow: 0 4px 20px var(--shadow);
+            border-top: 4px solid var(--accent);
+            transition: transform 0.3s;
+        }
+
+        .achievement-card:hover {
+            transform: translateY(-5px);
+        }
+
+        .achievement-icon {
+            font-size: 2.5rem;
+            margin-bottom: 1rem;
+        }
+
+        .achievement-card h3 {
+            color: var(--primary);
+            margin-bottom: 1rem;
+            font-size: 1.3rem;
+        }
+
+        .achievement-card p {
+            color: var(--text-light);
+            line-height: 1.7;
+        }
+
+        /* Footer */
+        footer {
+            background: var(--primary);
+            color: white;
+            text-align: center;
+            padding: 2.5rem 2rem;
+            margin-top: 4rem;
+        }
+
+        footer p {
+            opacity: 0.9;
+            margin-bottom: 0.5rem;
+        }
+
+        /* Responsive */
+        @media (max-width: 1024px) {
+            .hero {
+                grid-template-columns: 1fr;
+                gap: 2rem;
+            }
+
+            .contact-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        @media (max-width: 768px) {
+            .nav-links {
+                display: none;
+            }
+
+            .hero-content h1 {
+                font-size: 2.5rem;
+            }
+
+            .section-title {
+                font-size: 2rem;
+            }
+
+            .stats-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+
+            .timeline {
+                padding-left: 2rem;
+            }
+
+            .timeline::before {
+                left: 0;
+            }
+
+            .timeline-item::before {
+                left: -2.5rem;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .stats-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .academic-ids {
+                flex-direction: column;
+                gap: 0.8rem;
+            }
+
+            .cta-buttons {
+                flex-direction: column;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Navigation -->
+    <nav>
+        <div class="nav-container">
+            <div class="logo">Dr. Y V Srinivasa Murthy</div>
+            <ul class="nav-links">
+                <li><a href="#about">About</a></li>
+                <li><a href="#research">Research</a></li>
+                <li><a href="#projects">Projects</a></li>
+                <li><a href="#publications">Publications</a></li>
+                <li><a href="#experience">Experience</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="hero-content">
+            <h1>Dr. Y V Srinivasa Murthy</h1>
+            <div class="title">Associate Professor | Researcher | Technical Speaker</div>
+            <div class="roles">Academic Coordinator - PG | NBA Coordinator - SoCE</div>
+            <div class="affiliation">
+                Department of Information and Communication Technology<br>
+                Manipal Institute of Technology Bengaluru<br>
+                Manipal Academy of Higher Education (MAHE)<br>
+                <strong>Institute of Eminence</strong>
+            </div>
+            
+            <div class="academic-ids">
+                <div class="id-badge"><strong>Scopus:</strong> 57222128414</div>
+                <div class="id-badge"><strong>ORCID:</strong> 0000-0001-6146-5272</div>
+                <div class="id-badge"><strong>h-index:</strong> 10</div>
+            </div>
+
+            <div class="cta-buttons">
+                <a href="#publications" class="btn btn-primary">View Publications</a>
+                <a href="#contact" class="btn btn-secondary">Contact Me</a>
+            </div>
+        </div>
+
+        <div class="hero-sidebar">
+            <div class="quick-links">
+                <h3>Academic Profiles</h3>
+                <a href="https://sites.google.com/site/yvsm007" target="_blank" class="link-item">
+                    <div class="link-icon">🌐</div>
+                    <div>
+                        <strong>Personal Website</strong>
+                        <div style="font-size: 0.85rem; color: var(--text-light);">sites.google.com</div>
+                    </div>
+                </a>
+                <a href="https://scholar.google.com/citations?user=H5ONiRAAAAAJ&hl=en" target="_blank" class="link-item">
+                    <div class="link-icon">📚</div>
+                    <div>
+                        <strong>Google Scholar</strong>
+                        <div style="font-size: 0.85rem; color: var(--text-light);">View Citations</div>
+                    </div>
+                </a>
+                <a href="https://www.linkedin.com/in/dr-vishnu-yarlagadda-b8a199a9/" target="_blank" class="link-item">
+                    <div class="link-icon">💼</div>
+                    <div>
+                        <strong>LinkedIn</strong>
+                        <div style="font-size: 0.85rem; color: var(--text-light);">Professional Network</div>
+                    </div>
+                </a>
+                <a href="https://www.researchgate.net/profile/Yv_Srinivasa_Murthy" target="_blank" class="link-item">
+                    <div class="link-icon">🔬</div>
+                    <div>
+                        <strong>ResearchGate</strong>
+                        <div style="font-size: 0.85rem; color: var(--text-light);">Research Profile</div>
+                    </div>
+                </a>
+                <a href="https://www.youtube.com/channel/UC4n1JNbI1QZkpdA8U8UaaWQ" target="_blank" class="link-item">
+                    <div class="link-icon">🎥</div>
+                    <div>
+                        <strong>YouTube Channel</strong>
+                        <div style="font-size: 0.85rem; color: var(--text-light);">Educational Content</div>
+                    </div>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about">
+        <h2 class="section-title">About</h2>
+        <p class="section-subtitle">Academic Excellence & Research Leadership</p>
+        
+        <div style="background: white; padding: 3rem; border-radius: 12px; box-shadow: 0 4px 20px var(--shadow); margin-bottom: 3rem;">
+            <p style="font-size: 1.05rem; line-height: 1.9; margin-bottom: 1.5rem;">
+                Dr. Y V Srinivasa Murthy is a distinguished Associate Professor, Academic Coordinator for Post Graduate programs, and NBA Coordinator at the School of Computing and Engineering at Manipal Institute of Technology Bengaluru, part of the prestigious Manipal Academy of Higher Education (MAHE), recognized with Institute of Eminence status by the Government of India.
+            </p>
+            <p style="font-size: 1.05rem; line-height: 1.9; margin-bottom: 1.5rem;">
+                Born in Vijayawada, Andhra Pradesh, Dr. Murthy has established himself as a leading researcher in the fields of signal processing, machine learning, and artificial intelligence. He earned his PhD from the National Institute of Technology Karnataka (NITK) Surathkal in 2019, conducting groundbreaking research in Content-based Music Information Retrieval (CB-MIR) under the supervision of Dr. Shashidhar G. Koolagudi.
+            </p>
+            <p style="font-size: 1.05rem; line-height: 1.9;">
+                With a rich academic career spanning multiple prestigious institutions including VIT Vellore, NITK Surathkal, GITAM University, and ANITS, Dr. Murthy brings extensive experience in teaching, research, and academic administration. His passion for education has been recognized with the Best Teacher Award for excellence in teaching.
+            </p>
+        </div>
+
+        <div class="stats-grid">
+            <div class="stat-card">
+                <div class="stat-number">37+</div>
+                <div class="stat-label">Publications</div>
+            </div>
+            <div class="stat-card">
+                <div class="stat-number">10</div>
+                <div class="stat-label">h-index</div>
+            </div>
+            <div class="stat-card">
+                <div class="stat-number">5</div>
+                <div class="stat-label">Funded Projects</div>
+            </div>
+            <div class="stat-card">
+                <div class="stat-number">₹5.1Cr+</div>
+                <div class="stat-label">Project Funding</div>
+            </div>
+            <div class="stat-card">
+                <div class="stat-number">32</div>
+                <div class="stat-label">Projects Guided</div>
+            </div>
+            <div class="stat-card">
+                <div class="stat-number">25+</div>
+                <div class="stat-label">Guest Lectures</div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Research Areas -->
+    <section id="research">
+        <h2 class="section-title">Research Interests</h2>
+        <p class="section-subtitle">Multidisciplinary Research Focus</p>
+        
+        <div class="research-grid">
+            <div class="research-card">
+                <h4>🔒 Network Security & Cryptography</h4>
+                <p>Advanced encryption techniques and security protocols for modern communication systems</p>
+            </div>
+            <div class="research-card">
+                <h4>🎵 Music Information Retrieval</h4>
+                <p>Content-based analysis and classification of audio signals, recommender systems</p>
+            </div>
+            <div class="research-card">
+                <h4>🎤 Speech & Audio Processing</h4>
+                <p>Signal processing techniques for speech recognition and audio analysis</p>
+            </div>
+            <div class="research-card">
+                <h4>📸 Image & Video Processing</h4>
+                <p>Computer vision applications including medical imaging and object detection</p>
+            </div>
+            <div class="research-card">
+                <h4>🤖 Machine Learning & AI</h4>
+                <p>Deep learning, neural networks, and soft computing techniques</p>
+            </div>
+            <div class="research-card">
+                <h4>📡 Wireless Sensor Networks</h4>
+                <p>IoT applications and sensor network architectures</p>
+            </div>
+            <div class="research-card">
+                <h4>⚙️ Analysis of Algorithms</h4>
+                <p>Algorithm optimization and computational efficiency</p>
+            </div>
+            <div class="research-card">
+                <h4>🏥 Medical Imaging</h4>
+                <p>AI-driven diagnostic systems and healthcare applications</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Funded Projects -->
+    <section id="projects">
+        <h2 class="section-title">Funded Research Projects</h2>
+        <p class="section-subtitle">Leading Innovation Through Funded Research</p>
+
+        <div class="projects-table">
+            <h3>Ongoing Projects - Total Funding: ₹5.11 Crores</h3>
+            
+            <div class="project-item">
+                <h4>Infrastructure Development for AI-Driven Scientific and Societal Innovations</h4>
+                <div class="project-meta">
+                    <div class="meta-item">
+                        <strong>Funding Agency</strong>
+                        DST-FIST
+                    </div>
+                    <div class="meta-item">
+                        <strong>Amount</strong>
+                        ₹2,82,75,789
+                    </div>
+                    <div class="meta-item">
+                        <strong>Role</strong>
+                        Principal Investigator
+                    </div>
+                    <div class="meta-item">
+                        <strong>Status</strong>
+                        <span class="badge">Under Consideration</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="project-item">
+                <h4>Integrating Artificial Intelligence for Predictive and Prescriptive Measures of E-Waste using Sciences of Management</h4>
+                <div class="project-meta">
+                    <div class="meta-item">
+                        <strong>Funding Agency</strong>
+                        ANRF
+                    </div>
+                    <div class="meta-item">
+                        <strong>Amount</strong>
+                        ₹80,73,000
+                    </div>
+                    <div class="meta-item">
+                        <strong>Role</strong>
+                        Co-Principal Investigator
+                    </div>
+                    <div class="meta-item">
+                        <strong>Status</strong>
+                        <span class="badge">Under Review</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="project-item">
+                <h4>Fusion-Based AI System for Accurate Detection of Lanes, Edges, and True Obstacles in Autonomous Driving Environments</h4>
+                <div class="project-meta">
+                    <div class="meta-item">
+                        <strong>Funding Agency</strong>
+                        AICTE-RPS
+                    </div>
+                    <div class="meta-item">
+                        <strong>Amount</strong>
+                        ₹48,53,280
+                    </div>
+                    <div class="meta-item">
+                        <strong>Role</strong>
+                        Co-Principal Investigator
+                    </div>
+                    <div class="meta-item">
+                        <strong>Status</strong>
+                        <span class="badge">Under Review</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="project-item">
+                <h4>Enhanced Neural Network for Classification of Hyperspectral Imagery using Ensembled Models</h4>
+                <div class="project-meta">
+                    <div class="meta-item">
+                        <strong>Funding Agency</strong>
+                        ISRO-RESPOND
+                    </div>
+                    <div class="meta-item">
+                        <strong>Amount</strong>
+                        ₹53,85,600
+                    </div>
+                    <div class="meta-item">
+                        <strong>Role</strong>
+                        Principal Investigator
+                    </div>
+                    <div class="meta-item">
+                        <strong>Status</strong>
+                        <span class="badge">Under Review</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="project-item">
+                <h4>AI/ML based Airborne LiDAR Full Waveform Data Processing for Noise, Feature Extraction and Annotation</h4>
+                <div class="project-meta">
+                    <div class="meta-item">
+                        <strong>Funding Agency</strong>
+                        ISRO-RESPOND
+                    </div>
+                    <div class="meta-item">
+                        <strong>Amount</strong>
+                        ₹45,93,200
+                    </div>
+                    <div class="meta-item">
+                        <strong>Role</strong>
+                        Co-Principal Investigator
+                    </div>
+                    <div class="meta-item">
+                        <strong>Status</strong>
+                        <span class="badge">Under Review</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Publications -->
+    <section id="publications">
+        <h2 class="section-title">Selected Publications</h2>
+        <p class="section-subtitle">High-Impact Research Contributions</p>
+
+        <div class="publications-section">
+            <h3>Featured Journal Publications</h3>
+            
+            <div class="publication-item">
+                <h4>Content-Based Music Information Retrieval (CB-MIR) and Its Applications toward the Music Industry: A Review</h4>
+                <p class="publication-meta">
+                    <strong>Y.V. Srinivasa Murthy, S.G. Koolagudi</strong><br>
+                    ACM Computing Surveys (CSUR), 51(3), 45, 2018
+                    <span class="badge">IF: 6.8</span>
+                    <span class="badge badge-blue">A* RANKED</span>
+                    <br>DOI: 10.1145/3177849
+                </p>
+            </div>
+
+            <div class="publication-item">
+                <h4>Classification of Vocal and Non-vocal Segments in Audio Clips Using Genetic Algorithm Based Feature Selection (GAFS)</h4>
+                <p class="publication-meta">
+                    <strong>Y.V. Srinivasa Murthy, S.G. Koolagudi</strong><br>
+                    Expert Systems with Applications, Volume 106, Pages 77-91, September 2018
+                    <span class="badge">IF: 3.9</span>
+                    <span class="badge badge-blue">SCI INDEXED</span>
+                    <br>DOI: 10.1016/j.eswa.2018.04.005
+                </p>
+            </div>
+
+            <div class="publication-item">
+                <h4>Singer Identification for Indian Singers using Convolutional Neural Networks</h4>
+                <p class="publication-meta">
+                    <strong>Y.V. Srinivasa Murthy, S.G. Koolagudi, T.K.R. Jeshventh</strong><br>
+                    International Journal of Speech Technology (IJST), Springer, 2021
+                </p>
+            </div>
+
+            <div class="publication-item">
+                <h4>Pavement Distress Detection, Classification and Analysis using Machine Learning Algorithms: A Survey</h4>
+                <p class="publication-meta">
+                    <strong>R. Kothai, N. Prabakaran, Y.V. Srinivasa Murthy, L.R. Cenkeramaddi, V. Kakani</strong><br>
+                    IEEE Access, 2024
+                    <br>DOI: 10.1109/ACCESS.2024.3455093
+                </p>
+            </div>
+
+            <div class="publication-item">
+                <h4>An Efficient COVID-19 Mortality Risk Prediction Model Using Deep Synthetic Minority Oversampling Technique and Convolution Neural Networks</h4>
+                <p class="publication-meta">
+                    <strong>S. Rajkumar, A. Manickam, A. Moulay, Y.V.S. Murthy, M.S. Renuka Devi, T. Sivasubramanian</strong><br>
+                    BioMedInformatics, 3(2), 339-368, 2023
+                    <br>DOI: 10.3390/biomedinformatics3020023
+                </p>
+            </div>
+
+            <div class="publication-item">
+                <h4>Choice of a Classifier, Based on Properties of a Dataset: Case Study - Speech Emotion Recognition</h4>
+                <p class="publication-meta">
+                    <strong>S.G. Koolagudi, Y.S. Murthy, S.P. Bhaskar</strong><br>
+                    International Journal of Speech Technology, 21(1), 167-183, 2018
+                    <br>DOI: 10.1007/s10772-018-9495-8
+                </p>
+            </div>
+        </div>
+
+        <div class="publications-section" style="margin-top: 2rem;">
+            <h3>Recent Conference Publications (2024-2025)</h3>
+            
+            <div class="publication-item">
+                <h4>A Comparative Approach for Weapon Detection from Images Using Deep Learning Algorithms</h4>
+                <p class="publication-meta">
+                    IEEE 19th Conference on Industrial Electronics and Applications (ICIEA), 2024
+                </p>
+            </div>
+
+            <div class="publication-item">
+                <h4>Acute Ischemic Brain Stroke Classification Using Attention-Augmented Ensemble Approach</h4>
+                <p class="publication-meta">
+                    IEEE 3rd World Conference on Applied Intelligence and Computing (AIC), Gwalior, 2024
+                </p>
+            </div>
+
+            <div class="publication-item">
+                <h4>AgriFriend: A Robust Approach for Crop Recommendation System</h4>
+                <p class="publication-meta">
+                    Data Science & Exploration in Artificial Intelligence, 2025
+                </p>
+            </div>
+
+            <div class="publication-item">
+                <h4>Multiclass Classification of Abnormal Endocrine Gland States Using CNNs and Transformers</h4>
+                <p class="publication-meta">
+                    International Conference on Next Generation Communication & Information Systems, 2025
+                </p>
+            </div>
+        </div>
+
+        <div style="text-align: center; margin-top: 3rem;">
+            <p style="color: var(--text-light); font-size: 1.05rem; margin-bottom: 1rem;">
+                <strong>Total Publications:</strong> 37+ peer-reviewed articles | <strong>Citation Metrics:</strong> h-index of 10
+            </p>
+            <a href="https://scholar.google.com/citations?user=H5ONiRAAAAAJ&hl=en" target="_blank" class="btn btn-primary">
+                View Complete Publication List
+            </a>
+        </div>
+    </section>
+
+    <!-- Experience -->
+    <section id="experience">
+        <h2 class="section-title">Academic Experience</h2>
+        <p class="section-subtitle">Career Journey Across Premier Institutions</p>
+        
+        <div class="timeline">
+            <div class="timeline-item">
+                <h3>Manipal Institute of Technology Bengaluru</h3>
+                <div class="position">Associate Professor | Academic Coordinator - PG | NBA Coordinator</div>
+                <div class="date">August 2023 - Present</div>
+                <p>Department of Information and Communication Technology, Manipal Academy of Higher Education (Institute of Eminence). Leading post-graduate academic coordination and NBA accreditation processes while conducting advanced research in AI and signal processing.</p>
+            </div>
+            
+            <div class="timeline-item">
+                <h3>Vellore Institute of Technology (VIT)</h3>
+                <div class="position">Senior Assistant Professor</div>
+                <div class="date">July 2019 - August 2023</div>
+                <p>Department of Computational Intelligence, School of Computer Science and Engineering. Conducted research in deep learning and organized workshops on neural networks.</p>
+            </div>
+            
+            <div class="timeline-item">
+                <h3>National Institute of Technology Karnataka (NITK)</h3>
+                <div class="position">Assistant Lecturer & PhD Research Scholar</div>
+                <div class="date">July 2013 - July 2019</div>
+                <p>Department of Computer Science and Engineering. Completed PhD in Content-based Music Information Retrieval (CB-MIR) under Dr. Shashidhar G. Koolagudi while contributing to undergraduate and postgraduate teaching.</p>
+            </div>
+            
+            <div class="timeline-item">
+                <h3>GITAM University</h3>
+                <div class="position">Assistant Professor</div>
+                <div class="date">August 2012 - July 2013</div>
+                <p>Department of CSE, GITAM Institute of Technology. Teaching and research in algorithms and network security.</p>
+            </div>
+            
+            <div class="timeline-item">
+                <h3>Anil Neerukonda Institute of Technology and Sciences (ANITS)</h3>
+                <div class="position">Assistant Professor</div>
+                <div class="date">August 2008 - July 2012</div>
+                <p>Department of Computer Science and Engineering. Received Best Teacher Award for excellence in teaching. Organized faculty development programs and mentored students for competitive examinations.</p>
+            </div>
+            
+            <div class="timeline-item">
+                <h3>Gudlavalleru Engineering College & Sasi Institute</h3>
+                <div class="position">Assistant Professor</div>
+                <div class="date">June 2006 - May 2008</div>
+                <p>Department of Computer Science and Engineering. Early academic career establishing foundation in teaching and curriculum development.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Achievements -->
+    <section id="achievements">
+        <h2 class="section-title">Recognition & Achievements</h2>
+        <p class="section-subtitle">Awards, Memberships & Contributions</p>
+
+        <div class="achievement-grid">
+            <div class="achievement-card">
+                <div class="achievement-icon">🏆</div>
+                <h3>Best Teacher Award</h3>
+                <p>Recognized in April 2012 for excellence in teaching and outstanding contribution to student development, reflecting dedication to education and pedagogy.</p>
+            </div>
+
+            <div class="achievement-card">
+                <div class="achievement-icon">🎓</div>
+                <h3>MHRD PhD Scholarship</h3>
+                <p>Awarded prestigious MHRD scholarship (₹30,000/month) for PhD research at NITK from July 2013 to July 2019, supporting advanced research in music information retrieval.</p>
+            </div>
+
+            <div class="achievement-card">
+                <div class="achievement-icon">✈️</div>
+                <h3>CICS International Fund</h3>
+                <p>Received ₹30,000 funding from CICS in May 2015 for presenting research paper at an international conference, facilitating global research collaboration.</p>
+            </div>
+
+            <div class="achievement-card">
+                <div class="achievement-icon">🎤</div>
+                <h3>25+ Guest Lectures</h3>
+                <p>Delivered expert talks on IoT, Speech Signal Processing, Medical Imaging, Machine Learning, MATLAB, LaTeX, and career guidance across multiple institutions.</p>
+            </div>
+
+            <div class="achievement-card">
+                <div class="achievement-icon">📊</div>
+                <h3>IBM TGMC Mentor</h3>
+                <p>Served as mentor for IBM's The Great Mind Challenge (2009-2012), guiding students in technical innovation and problem-solving competitions.</p>
+            </div>
+
+            <div class="achievement-card">
+                <div class="achievement-icon">🎯</div>
+                <h3>GATE & UGC-NET Qualified</h3>
+                <p>Qualified in GATE 2012, 2013 and UGC-NET 2013. One among three from Andhra University region to clear NET in June 2013.</p>
+            </div>
+
+            <div class="achievement-card">
+                <div class="achievement-icon">👥</div>
+                <h3>Professional Memberships</h3>
+                <p>Senior Member of IEEE, Member of ACM, ISCA, and CSI. Active participation in international research communities.</p>
+            </div>
+
+            <div class="achievement-card">
+                <div class="achievement-icon">📖</div>
+                <h3>Book Editor</h3>
+                <p>Edited comprehensive book titled "Malware Analysis and Intrusion Detection in Cyber-Physical Systems" published by IGI Global.</p>
+            </div>
+
+            <div class="achievement-card">
+                <div class="achievement-icon">🔧</div>
+                <h3>Online Examination Pioneer</h3>
+                <p>Initiated online examination system for mid-semester assessments at ANITS through Moodle, modernizing evaluation processes.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact">
+        <h2 class="section-title">Contact Information</h2>
+        <p class="section-subtitle">Let's Connect</p>
+        
+        <div class="contact-grid">
+            <div class="contact-card">
+                <h3 style="color: var(--primary); margin-bottom: 2rem; font-size: 1.5rem;">Get in Touch</h3>
+                
+                <div class="contact-item">
+                    <div class="contact-icon">📍</div>
+                    <div class="contact-details">
+                        <h4>Office Address</h4>
+                        <p>
+                            Department of Information and Communication Technology<br>
+                            Manipal Institute of Technology<br>
+                            Manipal Academy of Higher Education<br>
+                            Bengaluru, Karnataka - 560 064, India
+                        </p>
+                    </div>
+                </div>
+                
+                <div class="contact-item">
+                    <div class="contact-icon">📧</div>
+                    <div class="contact-details">
+                        <h4>Email</h4>
+                        <p>
+                            <a href="mailto:vishnu.murthy@manipal.edu">vishnu.murthy@manipal.edu</a><br>
+                            <a href="mailto:urvishnu@gmail.com">urvishnu@gmail.com</a>
+                        </p>
+                    </div>
+                </div>
+                
+                <div class="contact-item">
+                    <div class="contact-icon">📱</div>
+                    <div class="contact-details">
+                        <h4>Phone</h4>
+                        <p>+91 984 854 4449</p>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="contact-card" style="background: linear-gradient(135deg, var(--primary), var(--secondary)); color: white;">
+                <h3 style="color: white; font-size: 1.8rem; margin-bottom: 1.5rem;">Research Collaboration</h3>
+                <p style="margin-bottom: 2rem; line-height: 1.8; opacity: 0.95;">
+                    Open to collaborating on research projects in AI/ML, signal processing, computer vision, IoT, and cybersecurity. Available for PhD student supervision, guest lectures, industrial partnerships, and funded research proposals.
+                </p>
+                
+                <div style="background: rgba(255,255,255,0.1); padding: 1.5rem; border-radius: 8px; margin-bottom: 1.5rem;">
+                    <h4 style="color: white; margin-bottom: 1rem;">Current Focus Areas</h4>
+                    <ul style="list-style: none; padding: 0; line-height: 2;">
+                        <li>✓ Autonomous Driving Systems</li>
+                        <li>✓ Medical Imaging & Healthcare AI</li>
+                        <li>✓ Hyperspectral Image Analysis</li>
+                        <li>✓ E-Waste Management Solutions</li>
+                        <li>✓ Music & Speech Processing</li>
+                    </ul>
+                </div>
+                
+                <a href="mailto:vishnu.murthy@manipal.edu" class="btn" style="background: white; color: var(--primary); display: inline-block;">
+                    Start a Conversation
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <p style="font-size: 1.1rem; margin-bottom: 1rem;">&copy; 2026 Dr. Y V Srinivasa Murthy. All rights reserved.</p>
+        <p style="font-size: 0.95rem;">Manipal Institute of Technology Bengaluru | Manipal Academy of Higher Education</p>
+        <p style="font-size: 0.9rem; margin-top: 1rem;">Scopus ID: 57222128414 | ORCID: 0000-0001-6146-5272</p>
+    </footer>
+
+    <script>
+        // Smooth scrolling for navigation links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    window.scrollTo({
+                        top: target.offsetTop - 80,
+                        behavior: 'smooth'
+                    });
+                }
+            });
+        });
+
+        // Animate elements on scroll
+        const observerOptions = {
+            threshold: 0.1,
+            rootMargin: '0px 0px -50px 0px'
+        };
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.style.opacity = '1';
+                    entry.target.style.transform = 'translateY(0)';
+                }
+            });
+        }, observerOptions);
+
+        // Observe stat cards for animation
+        document.querySelectorAll('.stat-card, .research-card, .achievement-card').forEach(el => {
+            el.style.opacity = '0';
+            el.style.transform = 'translateY(20px)';
+            el.style.transition = 'opacity 0.6s ease, transform 0.6s ease';
+            observer.observe(el);
+        });
+    </script>
+</body>
+</html>
